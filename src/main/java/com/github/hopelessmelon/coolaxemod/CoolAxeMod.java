@@ -1,3 +1,5 @@
+// This file is how Forge knows to build the Cool Axe Mod. Specifically the @Mod annotation is what tells Forge that this is a mod it needs to run. -MG
+
 package com.github.hopelessmelon.coolaxemod;
 
 import net.minecraftforge.fml.common.Mod;

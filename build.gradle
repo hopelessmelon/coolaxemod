@@ -1,3 +1,7 @@
+// This file builds the mod. The package, mod ID, and version are set here.
+// Mappings are also in this file. The mappings ostensibly haven't been updated to 1.16.1 yet; Forge discord buzz suggests this is a manual process and is currently underway. MCP used to be suggested for mappings, but is outdated.
+// -MG
+
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
@@ -146,7 +150,7 @@ publishing {
     }
 }
 
-// code i added from cadiboo's tutorial, everything has been cped exactly as written
+// code i added from cadiboo's tutorial, everything has been cped exactly as written -MG
 
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'
