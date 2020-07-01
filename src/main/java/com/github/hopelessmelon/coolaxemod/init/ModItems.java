@@ -1,5 +1,6 @@
-package com.github.hopelessmelon.coolaxemod.init;
+// This file is needed to initialize the mod items. -MG
 
+package com.github.hopelessmelon.coolaxemod.init;
 
 import com.github.hopelessmelon.coolaxemod.CoolAxeMod;
 import net.minecraft.item.Item;
