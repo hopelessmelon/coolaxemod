@@ -25,19 +25,22 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 @EventBusSubscriber(modid = CoolAxeMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 public final class ModEventSubscriber {
 
+    private static final Block test_block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F));
+
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
                 setup(new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)), "example_item"),
-                setup(new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)), "example_item2")//,
-                //setup(new BlockItem(, new BlockItem.Properties()), "example_oreitem")
+                setup(new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)), "example_item2"),
+                setup(new BlockItem(test_block, new BlockItem.Properties().group(ModItemGroups.MOD_ITEM_GROUP)), "example_oreitem")
         );
     }
 
     @SubscribeEvent
     public static void onRegisterBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
-                setup(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F)), "example_ore")
+                setup(test_block, "example_ore")
+                //setup(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F)), "example_ore")
         );
     }
 
